@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<form method="POST" action="submit2.php">
+<title>theFIRMA: Add new member</title>
+<h2>Please fill the data to add a new member in theFIRMA</h2>
+
+<button type="button" class="collapsible">Add a new student</button>
+<div class="content">
+    <table  align="center">
+      <tr>
+        <th>Student ID:</th>
+          <td><input type="text" name="studentId" required>*Assign a number for student ID ascendingly to each new member<td>
+      </tr>
+      <tr>
+        <th>Tag id:</th>
+          <td><input type="text" name="id"> <td>
+      </tr>
+    	<tr>
+      		<th>First name:</th>
+            <td><input type="text" name="firstName" required></td>
+      </tr>
+
+      <tr>
+      		<th>Last name:</th>
+            <td><input type="text" name="lastName" required></td>
+      </tr>
+      <tr>
+      		<th><input type="submit" value="Submit" required></th>
+     	</tr>
+    </table>
+</div>
+</form>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
